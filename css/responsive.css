@@ -1,0 +1,1281 @@
+@media(max-width:1380px) {
+    .welcome_restro_two_area .left .wl_restro_text h5 {
+        font: normal 16px/34px "Playfair Display", serif
+    }
+    .welcome_restro_two_area .left .wl_restro_text h2 {
+        font: bold 28px "Playfair Display", serif
+    }
+}
+
+@media(max-width:1250px) {
+    .one_page_menu .main_menu .navbar .nav.navbar-nav li {
+        margin-right: 20px
+    }
+}
+
+@media(max-width:1199px) {
+    .one_page_menu .main_menu .navbar .nav.navbar-nav li {
+        margin-right: 15px
+    }
+    .header_area.one_page_menu .main_menu {
+        padding: 0 15px
+    }
+    .one_page_menu .main_menu .navbar .nav.navbar-nav li a {
+        font-size: 16px
+    }
+    .main_menu .navbar .nav.navbar-nav li {
+        margin-right: 15px
+    }
+    .main_menu .navbar .nav.navbar-nav.navbar-right li.reserve_btn a {
+        padding: 0 10px 0 10px
+    }
+    .welcome_inner .welcome_image {
+        align-self: center
+    }
+    .welcome_inner .col-lg-6 {
+        display: flex
+    }
+    .exprience_area .exprience_inner_text p br {
+        display: none
+    }
+    .restaurant_view_area .restaurant_details {
+        padding-top: 22px;
+        padding-bottom: 33px
+    }
+    .subscribe_area .right .input-group input {
+        width: 300px
+    }
+    .welcome_restro_two_area .right .restro_img {
+        margin-top: 0;
+        z-index: 35
+    }
+    .welcome_restro_two_area {
+        display: block
+    }
+    .welcome_restro_two_area .left {
+        width: 100%
+    }
+    .welcome_restro_two_area .right {
+        width: 100%;
+        text-align: center
+    }
+    .welcome_restro_two_area {
+        padding-top: 70px
+    }
+    .welcome_restro_two_area .left .wl_restro_text {
+        max-width: 600px;
+        float: none;
+        margin: 0 auto 50px;
+        padding: 0 15px;
+        margin-right: 0
+    }
+    .welcome_restro_two_area .left .wl_restro_text h5 {
+        font: normal 24px/34px "Playfair Display", serif
+    }
+    .welcome_restro_two_area .left .wl_restro_text h2 {
+        font: bold 50px "Playfair Display", serif
+    }
+    .ariving_title p br {
+        display: none
+    }
+    .cart_table_area .table-responsive .table tbody tr:last-child td .view_all_btn {
+        margin-left: -145px
+    }
+    .cart_table_area .table-responsive .table tbody tr:last-child td .form-inline {
+        margin-right: -145px
+    }
+    .gallery_two .gallery_inner .gallery_grid {
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+    .specility_item .media .d-flex {
+        padding-right: 15px
+    }
+    .customer_service_area .left_title2 p br {
+        display: none
+    }
+    .s_we_item .media .media-body h4 {
+        font-size: 18px
+    }
+    .welcome_service .col-lg-4 {
+        display: flex;
+        justify-content: center;
+        align-self: center
+    }
+    .welcome_service .s_welcome_item {
+        padding-right: 0
+    }
+    .order_now_inner .discount_box {
+        margin-left: -50px
+    }
+    .opening_box {
+        margin-left: 0
+    }
+    .simple_slider_area .left {
+        padding-left: 15px
+    }
+    .simple_slider_area .left .text_slider_inner {
+        max-width: 100%;
+        float: none
+    }
+    .simple_slider_area .right {
+        padding-right: 15px
+    }
+    .simple_slider_area .left {
+        padding-right: 15px
+    }
+    .simple_slider_area .left .text_slider_inner .text_slider .item h2 {
+        font: normal 48px/72px "Merienda One", cursive
+    }
+    .simple_slider_area .left .text_slider_inner .text_slider .item p br {
+        display: none
+    }
+}
+
+@media(max-width:991px) {
+    .header_area.one_page_menu .main_menu .navbar .nav.navbar-nav li a {
+        display: block
+    }
+    .header_area .top_bar .d-flex {
+        display: block !important;
+        text-align: center
+    }
+    .header_area .top_bar .right .nav {
+        justify-content: center
+    }
+    .header_area .top_bar .left h5 {
+        line-height: 30px;
+        padding-top: 5px
+    }
+    .navbar-light .navbar-toggler {
+        cursor: pointer;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        top: 0;
+        border: 0;
+        padding: 0;
+        margin-top: 25px;
+        margin-bottom: 25px
+    }
+    .navbar-light .navbar-toggler span {
+        height: 2px;
+        width: 30px;
+        display: block;
+        background: #fff;
+        cursor: pointer;
+        transition: background .3s linear;
+        position: absolute;
+        left: 0;
+        top: 50%
+    }
+    .navbar-light .navbar-toggler[aria-expanded="true"] span {
+        background: transparent
+    }
+    .navbar-light .navbar-toggler.collapsed span {
+        background: #fff
+    }
+    .navbar-light .navbar-toggler span:before {
+        content: "";
+        height: 2px;
+        width: 30px;
+        display: block;
+        background: #fff;
+        left: 0;
+        top: -10px;
+        position: absolute;
+        transition: top .3s .3s, -webkit-transform .3s 0s
+    }
+    .navbar-light .navbar-toggler span:after {
+        content: "";
+        height: 2px;
+        width: 30px;
+        display: block;
+        background: #fff;
+        left: 0;
+        bottom: -10px;
+        position: absolute;
+        transition: bottom .2s .3s, -webkit-transform .3s 0s
+    }
+    .navbar-light .navbar-toggler[aria-expanded="true"] span:before {
+        transform: rotate(45deg);
+        top: 0;
+        transition: top .3s 0s, transform .3s .3s, -webkit-transform .3s .3s
+    }
+    .navbar-light .navbar-toggler[aria-expanded="true"] span:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+        transition: bottom .3s 0s, transform .3s .3s, -webkit-transform .3s .3s
+    }
+    .dropdown .dropdown-menu {
+        -webkit-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        -moz-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        -ms-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        -o-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        max-height: 0;
+        display: block;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+        border-radius: 0
+    }
+    .dropdown.show .dropdown-menu {
+        -webkit-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        -moz-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        -ms-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        -o-transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        transition: max-height .3s, opacity .2s .1s, visibility 0s 0s;
+        max-height: 250px;
+        overflow-y: scroll;
+        display: block;
+        opacity: 1;
+        visibility: visible
+    }
+    .main_menu .navbar .nav.navbar-nav li .mobile_dropdown {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #fff;
+        line-height: 48px;
+        font-size: 24px;
+        display: inline-block
+    }
+    .main_menu .navbar .nav.navbar-nav li {
+        margin-right: 0;
+        position: relative
+    }
+    .main_menu .navbar .nav.navbar-nav li a::after {
+        display: none
+    }
+    .main_menu .navbar .nav.navbar-nav li a::before {
+        display: none
+    }
+    .main_menu .navbar .nav.navbar-nav li a {
+        display: inline-block;
+        line-height: 48px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, .20)
+    }
+    .main_menu .navbar .nav.navbar-nav.navbar-right {
+        padding-left: 0;
+        padding-bottom: 20px
+    }
+    .main_menu .navbar .nav.navbar-nav.navbar-right li.reserve_btn a {
+        display: block;
+        margin-top: 10px;
+        text-align: center
+    }
+    .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu .submenu .dropdown-menu {
+        border: 0
+    }
+    .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu .submenu .dropdown-menu li {
+        padding-left: 40px
+    }
+    .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu .submenu .dropdown-menu li:last-child {
+        border-bottom: 1px solid #d8d8d8
+    }
+    .welcome_inner .welcome_text {
+        margin-bottom: 30px
+    }
+    .welcome_inner .welcome_image {
+        margin-left: 0
+    }
+    .discover_tab .nav-tabs li:first-child a {
+        padding-left: 17px
+    }
+    .discover_tab .nav-tabs {
+        background: #fff;
+        padding: 10px 0;
+        margin-bottom: 30px
+    }
+    .discover_tab .nav-tabs li a {
+        font-size: 18px;
+        padding: 0 17px;
+        line-height: 35px
+    }
+    .discover_tab .nav-tabs li a::before {
+        display: none
+    }
+    .discover_list .tab-pane .row {
+        margin-left: -15px;
+        margin-right: -15px
+    }
+    .discover_list .tab-pane .row .col-lg-6 {
+        padding-right: 15px;
+        padding-left: 15px
+    }
+    .price_list_item:last-child {
+        border-bottom: 1px dashed #c8c8c8
+    }
+    .price_list_item:first-child {
+        padding-top: 25px
+    }
+    .h_blog_item {
+        max-width: 370px;
+        margin: 0 auto 30px
+    }
+    .home_blog_area .center_title {
+        text-align: center
+    }
+    .home_blog_inner {
+        margin-bottom: -30px
+    }
+    .restaurant_view_area .restu_img {
+        max-width: 500px;
+        margin: auto
+    }
+    .restaurant_view_area .restaurant_details {
+        max-width: 500px;
+        margin: auto
+    }
+    .subscribe_area .d-flex {
+        display: block !important;
+        text-align: center
+    }
+    .subscribe_area .d-flex .left {
+        margin-bottom: 25px
+    }
+    .footer_area .footer_widgets .col-sm-6 {
+        margin-bottom: 30px
+    }
+    .footer_area .footer_widgets .row {
+        margin-bottom: -30px
+    }
+    .some_about_area .ab_text {
+        margin-top: 50px
+    }
+    .feature_dishes_area {
+        padding-bottom: 70px;
+        padding-top: 70px
+    }
+    .discover_black .discover_tab .nav-tabs {
+        background: #000
+    }
+    .discover_tab .nav-tabs li:last-child a {
+        padding-right: 17px
+    }
+    .home_blog_area .view_blog_btn {
+        position: relative;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        margin-top: 50px
+    }
+    .home_map_area .event_item {
+        margin-bottom: 30px
+    }
+    .home_map_area {
+        height: auto;
+        margin-bottom: 0
+    }
+    .home_map_area .mapBox {
+        margin-top: 40px
+    }
+    .ariving_column .ariving_img {
+        margin-bottom: 50px
+    }
+    .ariving_column .ariving_item img {
+        margin-top: 30px
+    }
+    .offer_difference_area .difference_text {
+        margin-bottom: 50px
+    }
+    .h_blog_item_sp {
+        max-width: 370px;
+        margin: 0 auto 30px
+    }
+    .welcome_restro_area.one_page {
+        padding: 150px 0
+    }
+    .welcome_restro_area.one_page .welcome_inner .single_img {
+        margin-left: 10px;
+        margin-top: 0
+    }
+    .discover_menu_area.one_page {
+        padding: 150px 0
+    }
+    .testimonials_area.one_page {
+        padding: 150px 0
+    }
+    .tema_area.one_page {
+        padding: 150px 0
+    }
+    .contact_form_area.one_page {
+        padding: 150px 0
+    }
+    .contact_form_area.one_page .contact_details {
+        margin-top: 50px
+    }
+    .book_table_area.one_page {
+        padding: 150px 0
+    }
+    .opening_box {
+        margin-left: 0;
+        margin-top: 30px
+    }
+    .error_area .error_text_inner h2 {
+        font: bold 150px "Playfair Display", serif
+    }
+    .error_area .error_text_inner h3 {
+        font: bold 40px "Playfair Display", serif
+    }
+    .error_area .error_text_inner h5 {
+        font: bold italic 22px "Playfair Display", serif;
+        color: #fff
+    }
+    .welcome_restro_area.ab_welcome .welcome_inner .welcome_text {
+        padding-right: 0
+    }
+    .contact_form_area .offset-lg-1 {
+        margin-top: 50px
+    }
+    .about_checkout_area .ab_check_text p {
+        margin-right: 0
+    }
+    .header_area+row,
+    .header_area+div,
+    .header_area+section {
+        margin-top: 88px
+    }
+    .ab_service_item {
+        max-width: 370px;
+        margin: 0 auto 30px
+    }
+    .about_service_area .about_service_inner {
+        margin-bottom: -30px
+    }
+    .blog_grid_area .blog_item {
+        max-width: 570px;
+        margin: 0 auto 50px
+    }
+    .main_blog_inner {
+        padding-right: 0
+    }
+    .right_sidebar_area {
+        margin-top: 50px
+    }
+    .cart_table_area .table-responsive .table tbody tr:last-child td .form-inline {
+        margin-right: -192px
+    }
+    .cart_table_area .table-responsive .table {
+        margin-bottom: 10px
+    }
+    .cart_total_inner {
+        margin-top: 40px
+    }
+    .order_box_price {
+        margin-top: 50px
+    }
+    .coming_soon_counter .counter-item {
+        width: 150px;
+        height: 150px;
+        padding: 28px 0;
+        margin: 0 10px
+    }
+    .coming_soon_counter .counter-item span {
+        font-size: 50px;
+        line-height: 50px
+    }
+    .contact_details {
+        margin-top: 50px
+    }
+    .contact_two_area .love_from_area {
+        margin-top: 0;
+        margin-right: 0
+    }
+    .contact_two_area {
+        padding-top: 100px
+    }
+    .contact_two_breadcrumb {
+        padding: 200px 0 140px 0
+    }
+    .address_map_inner .address_text {
+        padding-right: 0;
+        margin-bottom: 50px
+    }
+    .gallery_two .g_fillter .nav li {
+        margin-bottom: 10px
+    }
+    .gallery_two .g_fillter .nav {
+        margin-bottom: -10px
+    }
+    .gallery_two .gallery_inner .gallery_grid {
+        flex: 0 0 33.33%;
+        max-width: 33.33%
+    }
+    .specility_item {
+        max-width: 547px;
+        margin: auto
+    }
+    .specility_inner .col-lg-6:nth-last-child(2) .specility_item:before {
+        display: block
+    }
+    .price_item {
+        margin: 0 auto 30px;
+        max-width: 370px
+    }
+    .menu_price_inner {
+        margin-bottom: -30px
+    }
+    .menu_list .row {
+        margin-left: -15px;
+        margin-right: -15px
+    }
+    .menu_list .col-lg-6 {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+    .product_details_area .product_d_price .product_img {
+        padding-right: 0
+    }
+    .product_d_price {
+        max-width: 525px;
+        margin: auto
+    }
+    .product_d_price .product_details_text {
+        margin-top: 30px
+    }
+    .price_video_area {
+        padding-top: 566px
+    }
+    .price_video_area .video_img {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 50px
+    }
+    .price_video_area .price_video_list {
+        margin-right: 0
+    }
+    .c_service_inner .c_s_item {
+        margin-bottom: 50px
+    }
+    .customer_service_area {
+        height: auto;
+        margin-bottom: 0
+    }
+    .customer_service_area .left_title2 {
+        margin-bottom: 45px
+    }
+    .customer_service_area .c_service_inner {
+        margin-bottom: 0
+    }
+    .customer_service_area .service_items {
+        margin-bottom: 0
+    }
+    .service_items .s_item {
+        margin-bottom: 30px
+    }
+    .customer_service_area .service_items {
+        margin-bottom: -30px
+    }
+    .customer_service_area {
+        padding-bottom: 70px
+    }
+    .order_now_inner .discount_box {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 30px
+    }
+    .order_now_inner .order_text {
+        padding-right: 0
+    }
+    .table_breadcrumb h2::before {
+        display: none
+    }
+    .table_breadcrumb {
+        min-height: 100%;
+        padding-bottom: 200px;
+        padding-top: 240px
+    }
+    .table_breadcrumb h2 {
+        padding-top: 0
+    }
+    .book_table_area.one_page.table_book {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin: 0
+    }
+    .team_inner_2 .team_item {
+        margin-bottom: 30px
+    }
+    .team_inner_2 {
+        margin-bottom: -30px !important
+    }
+    .header_area.menu_two+row,
+    .header_area.menu_two+div,
+    .header_area.menu_two+section {
+        margin-top: 0
+    }
+    .header_area.menu_five+row,
+    .header_area.menu_five+div,
+    .header_area.menu_five+section {
+        margin-top: 0
+    }
+    .simple_slider_area .left {
+        width: 100%;
+        color: #fff;
+        padding-bottom: 50px
+    }
+    .simple_slider_area {
+        display: block
+    }
+    .simple_slider_area .right {
+        width: 100%;
+        padding-left: 15px
+    }
+    .simple_slider_area .left .text_slider_inner .text_slider .item p br {
+        display: block
+    }
+    .ab_breadcrumb_3 h2 {
+        font: normal 50px/65px "Merienda One", cursive
+    }
+    .ab_breadcrumb_3 {
+        padding-top: 200px
+    }
+    .bappo_welcome_area.bappo_wlc_pad {
+        padding-top: 220px
+    }
+    .header_area.navbar_fixed .main_menu .navbar .nav.navbar-nav li a {
+        line-height: 48px
+    }
+    .menu_five .main_menu {
+        background: #000
+    }
+    .main_menu {
+        background: rgba(0, 0, 0, 1)
+    }
+    .signing_text_area .col-lg-5 p {
+        margin-bottom: 0
+    }
+    .feature_dishes_area.bg_gray {
+        padding-bottom: 100px
+    }
+    .footer_widgets .col-lg-3:nth-child(2) .link_widget {
+        margin-left: 0
+    }
+}
+
+@media(max-width:767px) {
+    .dishes_slider .dishes_arrow {
+        position: relative;
+        right: 0;
+        top: 0;
+        text-align: center;
+        margin-bottom: 20px
+    }
+    .discover_menu_area .discover_menu_inner {
+        max-width: 100%;
+        margin: -0px auto 0;
+        padding: 0
+    }
+    .left_title2 p {
+        font-size: 18px
+    }
+    .footer_copyright {
+        display: block !important;
+        text-align: center
+    }
+    .exprience_area.check_out_area .exprience_inner_text h3 {
+        font-size: 50px;
+        margin-bottom: 20px
+    }
+    .exprience_area.check_out_area .exprience_inner_text p {
+        margin-bottom: 20px
+    }
+    .single_testi_area .single_testi_slider .media .d-flex {
+        padding-right: 30px
+    }
+    .single_testi_area .single_testi_slider .media .d-flex::before {
+        right: 15px
+    }
+    .book_table_area .left_title2 p br {
+        display: none
+    }
+    .delicious_food_area p {
+        font: normal 18px "Playfair Display", serif
+    }
+    .delicious_food_area p br {
+        display: none
+    }
+    .menu_five .main_menu {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+    .ab_breadcrumb_3 p br {
+        display: none
+    }
+    .ab_breadcrumb_3 h2 {
+        font: normal 40px/55px "Merienda One", cursive;
+        margin-bottom: 13px
+    }
+    .ab_breadcrumb {
+        padding-bottom: 180px
+    }
+    .ab_breadcrumb p br {
+        display: none
+    }
+    .coming_soon_counter {
+        max-width: 340px;
+        margin: 80px auto 0
+    }
+    .coming_soon_counter .counter-item {
+        margin-bottom: 20px
+    }
+    .coming-header {
+        font: bold 50px "Playfair Display", serif
+    }
+    .contact_two_breadcrumb p br {
+        display: none
+    }
+    .contact_two_breadcrumb {
+        padding: 200px 0 150px 0
+    }
+    .contact_two_breadcrumb h2 {
+        font: 500 30px/40px "Poppins", sans-serif
+    }
+    .gallery_two .gallery_inner .gallery_grid {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+    .price_video_area {
+        padding-top: 390px
+    }
+    .home_map_area.service_info .service_items {
+        margin-top: -0px;
+        padding-top: 70px;
+        margin-bottom: 50px
+    }
+    .welcome_service .row .row {
+        margin-bottom: 0
+    }
+    .discover_menu_area {
+        padding-top: 100px
+    }
+}
+
+@media(max-width:575px) {
+    .header_area .top_bar .right .nav {
+        display: block;
+        text-align: center
+    }
+    .header_area .top_bar .right .nav li {
+        margin-right: 0
+    }
+    .header_area .top_bar .right .nav li a::before {
+        display: none
+    }
+    .header_area .top_bar .right .nav li a {
+        line-height: 30px
+    }
+    .header_area .top_bar .left h5 {
+        padding-top: 0;
+        font-size: 14px
+    }
+    .header_area .top_bar .left h5 a {
+        font-size: 14px
+    }
+    .header_area .top_bar {
+        padding: 10px 0
+    }
+    .feature_dishes_area.bg_gray {
+        padding-bottom: 70px
+    }
+    .header_area .top_bar .right .nav li .nice_select {
+        float: none;
+        width: 45px;
+        margin: auto;
+        height: 40px;
+        line-height: 40px
+    }
+    .header_area .top_bar .left h5 i {
+        font-size: 16px;
+        margin-right: 5px
+    }
+    .p_100 {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+    .pad_top {
+        padding-top: 70px
+    }
+    .pad_btm {
+        padding-bottom: 70px
+    }
+    .welcome_inner .welcome_text h3 {
+        font-size: 30px
+    }
+    .welcome_inner .welcome_text h5 {
+        font-size: 20px;
+        line-height: 28px
+    }
+    .left_title p::before {
+        display: none
+    }
+    .dishes_slider .product_item {
+        text-align: center
+    }
+    .discover_tab .nav-tabs li a {
+        font-size: 15px;
+        padding: 0 8px
+    }
+    .price_list_item h5 {
+        font-size: 16px;
+        margin-top: -10px
+    }
+    .exprience_area .exprience_inner_text h3 {
+        font-size: 36px
+    }
+    .exprience_area {
+        padding-top: 120px;
+        padding-bottom: 100px
+    }
+    .single_center_title h2 {
+        font-size: 28px
+    }
+    .team_item {
+        max-width: 300px;
+        margin: 0 auto 30px
+    }
+    .team_inner {
+        margin-bottom: -30px !important
+    }
+    .left_title2 h2::before {
+        display: none
+    }
+    .restaurant_view_area .restaurant_details h3 {
+        font-size: 28px
+    }
+    .restaurant_view_area .restaurant_details {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+    .center_title p {
+        font-size: 16px
+    }
+    .center_title h2 {
+        font-size: 28px
+    }
+    .subscribe_area .left h5 br {
+        display: none
+    }
+    .subscribe_area .right .input-group {
+        display: block
+    }
+    .subscribe_area .right .input-group input {
+        border-radius: 3px !important;
+        width: 100%
+    }
+    .subscribe_area .right .input-group .input-group-append {
+        text-align: center;
+        margin-left: 0;
+        justify-content: center
+    }
+    .subscribe_area .right .input-group .input-group-append .submit_btn {
+        border-radius: 3px !important;
+        margin-top: 10px
+    }
+    .left_title h2 {
+        font-size: 28px
+    }
+    .menu_two .main_menu {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+    .some_about_area .ab_text h3 {
+        font-size: 28px
+    }
+    .exprience_area.check_out_area {
+        padding-bottom: 100px;
+        padding-top: 100px
+    }
+    .single_testi_area .single_testi_slider .media .media-body p {
+        font: italic 16px/28px "Playfair Display", serif
+    }
+    .single_testi_slider .media {
+        display: block
+    }
+    .single_testi_area .single_testi_slider .media .d-flex img {
+        margin-top: 0;
+        width: auto;
+        margin-bottom: 15px
+    }
+    .single_testi_area .single_testi_slider .media .d-flex::before {
+        display: none
+    }
+    .single_testi_area .single_testi_slider .single_arrow {
+        position: relative;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        margin-top: 30px
+    }
+    .single_testi_area {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+    .our_video_area .video_inner h3 {
+        font: bold 28px/42px "Playfair Display", serif
+    }
+    .f_dishes_item {
+        max-width: 370px;
+        margin: 0 auto 30px
+    }
+    .our_video_area .video_inner h3 br {
+        display: none
+    }
+    .welcome_restro_two_area .left .wl_restro_text h5 {
+        font: normal 16px/28px "Playfair Display", serif
+    }
+    .welcome_restro_two_area .left .wl_restro_text h2 {
+        font: bold 28px/34px "Playfair Display", serif
+    }
+    .our_service_text {
+        padding: 100px 0 100px 0
+    }
+    .our_service_text .s_text_inner h3 {
+        font: bold 48px/60px "Playfair Display", serif
+    }
+    .service_item {
+        max-width: 270px;
+        margin: 0 auto 30px
+    }
+    .delicious_food_area h3 {
+        font: bold 48px/60px "Playfair Display", serif
+    }
+    .delicious_food_area {
+        padding-top: 100px;
+        padding-bottom: 100px
+    }
+    .welcome_restro_two_area .left .wl_restro_text {
+        max-width: 100%
+    }
+    .welcome_restro_two_area .left {
+        padding-right: 0
+    }
+    .ariving_title h3 {
+        font: bold italic 22px "Playfair Display", serif
+    }
+    .welcome_part {
+        padding-bottom: 70px
+    }
+    .bappo_welcome_area .welcome_service {
+        padding-bottom: 0
+    }
+    .single_testi_area .single_testi_slider .media .d-flex {
+        padding-right: 0
+    }
+    .single_testi_area.pad_top {
+        padding-top: 70px
+    }
+    .welcome_service .title_welcome {
+        font: bold 28px "Playfair Display", serif
+    }
+    .onepage_bnr {
+        min-height: auto;
+        padding: 170px 0 120px 0
+    }
+    .ab_breadcrumb_3 h2 {
+        font: normal 36px/50px "Merienda One", cursive
+    }
+    .welcome_restro_area.one_page {
+        padding: 100px 0
+    }
+    .welcome_inner .welcome_image .image_item {
+        margin-right: 10px;
+        margin-bottom: 10px
+    }
+    .welcome_restro_area.one_page .welcome_inner .single_img {
+        margin-left: 0;
+        display: block
+    }
+    .welcome_inner .col-lg-6 {
+        display: block
+    }
+    .discover_menu_area.one_page {
+        padding: 100px 0
+    }
+    .feature_dishes_area.one_page {
+        padding: 100px 0
+    }
+    .testimonials_area.one_page {
+        padding: 100px 0
+    }
+    .tema_area.one_page {
+        padding: 100px 0
+    }
+    .contact_form_area.one_page {
+        padding: 100px 0
+    }
+    .book_table_area.one_page {
+        padding: 100px 0
+    }
+    .book_table_area.one_page .book_table_box {
+        padding: 65px 20px
+    }
+    .book_table_area.one_page .book_table_box .book_title h2 {
+        font: bold 28px "Playfair Display", serif
+    }
+    .error_area {
+        min-height: 100%;
+        padding-top: 80px;
+        padding-bottom: 120px
+    }
+    .error_area .error_text_inner h3 {
+        font: bold 28px "Playfair Display", serif
+    }
+    .error_area .error_text_inner h5 {
+        font: bold italic 18px "Playfair Display", serif
+    }
+    .ab_breadcrumb h2::before {
+        display: none
+    }
+    .breadcrumb_area h2 {
+        font: bold 48px "Playfair Display", serif
+    }
+    .delicious_food_area.pad_btm {
+        padding-top: 120px;
+        padding-bottom: 120px
+    }
+    .header_area+row,
+    .header_area+div,
+    .header_area+section {
+        margin-top: 180px
+    }
+    .breadcrumb_area {
+        padding: 130px 0 65px 0
+    }
+    .breadcrumb_area h2 {
+        font: bold 36px "Playfair Display", serif
+    }
+    .some_about_area {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+    .blog_item .blog_text .blog_time {
+        padding: 15px 0
+    }
+    .blog_item .blog_text .blog_time .float-left {
+        float: none !important
+    }
+    .blog_item .blog_text .blog_time .float-right {
+        float: none !important
+    }
+    .blog_item .blog_text .blog_time .float-left a {
+        line-height: 30px;
+        display: block
+    }
+    .blog_item .blog_text .blog_time .float-right .nav li a {
+        line-height: 40px
+    }
+    .billing_form .select_check2 .creat_account label {
+        font-size: 18px
+    }
+    .order_box_price .payment_list {
+        padding: 30px 15px 55px 15px
+    }
+    .order_box_price .payment_list .price_single_cost h5 {
+        font-size: 14px
+    }
+    .order_box_price .payment_list .price_single_cost h5 span {
+        font-size: 14px
+    }
+    .order_box_price .payment_list .price_single_cost h4 {
+        font-size: 14px
+    }
+    .coming_soon_area .c-search-form .input-group {
+        display: block
+    }
+    .coming_soon_area .c-search-form .input-group .form-control {
+        width: 100%;
+        margin-bottom: 15px
+    }
+    .coming_soon {
+        min-height: 100%;
+        padding: 100px 0
+    }
+    .contact_two_breadcrumb h2 br {
+        display: none
+    }
+    .contact_two_area {
+        padding-top: 70px
+    }
+    .love_from_area {
+        padding: 60px 20px
+    }
+    .love_from_area .love_title h2 {
+        font: bold 30px "Playfair Display", serif
+    }
+    .contact_two_area .contact_info_text {
+        margin-top: 70px
+    }
+    .map_area.p_100 {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+    .single_form_area .single_form_inner {
+        padding-top: 70px
+    }
+    .single_form_area {
+        padding-bottom: 70px
+    }
+    .faq_form_area .faq_left_form .faq_title h3 {
+        font-size: 28px
+    }
+    .faq_form_area {
+        padding: 70px 0 70px 0
+    }
+    .delicious_food_area.app_tices h3 {
+        font-size: 48px
+    }
+    .product_tab_area .nav.nav-tabs a {
+        margin-right: 0
+    }
+    .breadcrumb_area.promotions_bnr {
+        height: auto
+    }
+    .price_video_area {
+        padding-top: 70px
+    }
+    .breadcrumb_area.product_banner {
+        padding-top: 180px
+    }
+    .service_items .s_item {
+        max-width: 370px;
+        margin: 0 auto 30px
+    }
+    .customer_service_area .left_title2 h2 {
+        margin-bottom: 12px
+    }
+    .welcome_service .row .row {
+        margin-bottom: 0
+    }
+    .bappo_welcome_area.service_welcome {
+        padding-top: 70px
+    }
+    .bappo_welcome_area.service_welcome .welcome_service {
+        padding-bottom: 70px
+    }
+    .left_title2 h2 {
+        font-size: 28px
+    }
+    .s_comment_list .s_comment_list_inner .media {
+        padding-right: 25px
+    }
+    .table_breadcrumb {
+        padding-bottom: 100px;
+        padding-top: 150px
+    }
+    .table_breadcrumb h2 {
+        font: bold 48px "Playfair Display", serif
+    }
+    .feature_dishes_area.p_100 {
+        padding-bottom: 70px
+    }
+    .book_table_area.one_page.table_book {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+    .simple_slider_area .left .text_slider_inner .text_slider .item p br {
+        display: none
+    }
+    .simple_slider_area .left .text_slider_inner .text_slider .item h2 {
+        font: normal 30px/42px "Merienda One", cursive
+    }
+    .simple_slider_area .left .text_slider_inner {
+        margin-top: 0
+    }
+    .ab_breadcrumb_3 {
+        padding-top: 170px;
+        padding-bottom: 230px;
+        min-height: auto
+    }
+    .about_checkout_area .ab_check_text {
+        padding-top: 0
+    }
+    .welcome_part h2 {
+        font: bold italic 40px "Playfair Display", serif
+    }
+    .navbar-collapse {
+        max-height: 303px;
+        overflow-y: scroll
+    }
+    .discover_menu_area {
+        padding-top: 70px
+    }
+}
+
+@media(max-width:480px) {
+    .testi_item .testi_text {
+        padding: 30px 20px 35px 20px
+    }
+    .blog_item .blog_text .blog_time .float-right .nav li {
+        margin-right: 8px
+    }
+    .blog_item .blog_text .blog_time .float-right .nav li a {
+        font-size: 15px
+    }
+    .blog_item .blog_text .blog_time .float-right .nav li a::before {
+        right: -8px
+    }
+    .coming_soon_counter .counter-item {
+        width: 120px;
+        height: 120px;
+        padding: 18px 0
+    }
+    .coming_soon_counter .counter-item span {
+        font-size: 40px;
+        line-height: 40px
+    }
+    .coming_soon_counter .counter-item .smalltext {
+        font-size: 18px
+    }
+    .coming_soon_counter {
+        max-width: 280px
+    }
+    .faq_collaps .left_side_collaps .card .card-header button {
+        font-size: 18px
+    }
+    .gallery_two .gallery_inner .gallery_grid {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .specility_item .media .media-body h5 {
+        float: none;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        display: block
+    }
+    .specility_item .media {
+        display: block;
+        text-align: center
+    }
+    .specility_item .media .d-flex {
+        padding-right: 0;
+        justify-content: center;
+        padding-bottom: 20px
+    }
+    .product_tab_area .nav.nav-tabs a {
+        font-size: 13px;
+        padding: 0 12px
+    }
+    .s_comment_list .s_comment_list_inner .media {
+        display: block
+    }
+    .s_comment_list .s_comment_list_inner .media .d-flex {
+        margin-bottom: 15px;
+        padding-right: 0
+    }
+    .main_slider_area .rev_slider .slider_text_box .slider_button .view_all_btn {
+        line-height: 36px !important;
+        height: 36px !important;
+        padding: 0 30px !important
+    }
+    .welcome_part h2 {
+        font: bold italic 32px "Playfair Display", serif;
+        margin-bottom: 20px
+    }
+}

@@ -1,0 +1,1192 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>食话食说</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/linearicons/style.css">
+    <link rel="stylesheet" href="vendors/stroke-icon/style.css">
+    <!-- Extra Plugin CSS -->
+    <link href="vendors/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendors/nice-selector/css/nice-select.css" rel="stylesheet">
+    <!-- Rev slider css -->
+    <link href="vendors/revolution/css/settings.css" rel="stylesheet">
+    <link href="vendors/revolution/css/layers.css" rel="stylesheet">
+    <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        html,body {
+            height: 110%;
+            margin: 0;
+            font-size: 1.3rem;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd164;
+        }
+        .chart-container {
+            width: 100%;
+            height: 550px;
+        }
+        .col-lg-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* 让内容居中 */
+        }
+        .team_item {
+            margin: 10px; /* 设置间隔 */
+        }
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* 让每行内容居中 */
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 500px;
+        }
+        /* p1部分 */
+        .section-initial{
+            width:100%; /* 容器宽度 */
+            max-width: 2200px; /* 最大宽度 */
+            height: 600px;
+            overflow: hidden; /* 防止子元素溢出 */
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 图片容器 */
+        .images-container {
+            display: flex;
+            align-items: center; /* 水平居中图片 */
+            width: 50%; /* 占左半部分 */
+            padding: 0 10px; /* 左右留间隔 */
+            box-sizing: border-box;
+        }
+
+        /* 单独的图片样式 */
+        .image-one, .image-two {
+            width: calc(50% - 10px); /* 图片宽度减去间隔 */
+            margin-right: 10px; /* 图片之间的间隔 */
+        }
+
+        /* 第二张图片没有右边距 */
+        .image-two:last-child {
+            margin-right: 0;
+        }
+
+        /* 文字容器 */
+        .text-container {
+            display: flex;
+            flex-direction: column; /* 竖直排列 */
+            justify-content: center; /* 垂直居中 */
+            align-items: center; /* 水平居中 */
+            width: 30%; /* 占右半部分 */
+            text-align: left; /* 文本水平居中 */
+        }
+
+        /* 文字样式 */
+        #t1 h2{
+            font-family: customFont3;
+            color: black;
+            font-weight: bolder;
+            font-size: 35px;
+            line-height: 1.5; /* 设置行间距，1.5表示行高是字体大小的1.5倍 */
+        }
+
+        #t1 h3{
+            font-family: customFont3;
+            color: black;
+            font-weight: bolder;
+            font-size: 50px;
+            line-height: 1.5; /* 设置行间距，1.5表示行高是字体大小的1.5倍 */
+            text-align: center;
+        }
+
+        #trans {
+            position: relative;
+            width: 100%;
+            height: 600px;
+        }
+        
+        .exprience_inner_text {
+            position: absolute;  /* 绝对定位 */
+            top: 0%;           /* 根据需要调整垂直位置 */
+            left: 20%;           /* 文本容器的右侧与父容器的左侧距离 */
+            width: 60%;          /* 文本容器宽度*/
+            transform: translateY(-28%);
+        }
+        #filearea{
+            background-color: #ffd164;
+        }
+
+        .left_title2 {
+            top: 0%;           /* 根据需要调整垂直位置 */
+            left: 20%;           /* 文本容器的右侧与父容器的左侧距离 */
+            width: 100%;          /* 文本容器宽度*/
+            text-align: center;
+        }
+        #chartarea {
+            background-color: #ffd164;
+            height: 100%; /* 填充整个视口高度 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+        .ECharts {
+            width: 100%; /* 占满容器宽度 */
+            padding: 0; /* 移除默认的内边距 */
+            margin: 0; /* 移除默认的外边距 */
+            box-sizing: border-box;
+        }
+        .chart-container {
+            width: 100%; /* 根据需要调整宽度 */
+            max-width: 800px; /* 设置最大宽度限制 */
+            height: 80vh; /* 根据需要调整高度 */
+            box-sizing: border-box;
+            position: relative;
+            /* 如果需要，可以添加内边距、边框等 */
+        }
+        #word{
+            position: relative;
+            width: 100%;
+            height: 550px;
+        }
+
+        .start_text{
+            position: absolute;  /* 绝对定位 */
+            top: 20%;           /* 根据需要调整垂直位置 */
+            left: 50%;           /* 文本容器的右侧与父容器的左侧距离 */
+            width: 80%;          /* 文本容器宽度*/
+            transform: translateY(100%); /* 使用translateY进行垂直居中微调 */
+        }
+
+        .w2{
+            position: absolute;
+            top: 55%;
+            left: -25%;
+            width:105%; 
+            transform: translateY(40%); /* 使用translateY进行垂直居中微调 */
+        }
+
+        #text-e{
+            position: relative;
+            width: 100%;
+            height: 600px;
+            text-align: center;
+        }
+        .image-three{
+            top: 20%;           /* 根据需要调整垂直位置 */
+            left: 10%;           /* 容器的右侧与父容器的左侧距离 */
+            width: 50%;          /* 容器宽度*/
+            transform: translate(0%,50%);
+
+        }
+        #text h2{
+            font-size: 30px;
+            font-family: 'customFont3';
+            font-weight: bold;
+            color: #ffffff;
+            top: 0%;           /* 根据需要调整垂直位置 */
+            left: 0%;           /* 文本容器的右侧与父容器的左侧距离 */
+            width: 83%;          /* 文本容器宽度*/
+            transform: translate(10%,-220%);
+        }
+
+        #complaintarea{
+            background-color: #ffd164;
+        }
+        .center_title{
+            text-align: center;
+        }
+        #endend{
+            position: relative;
+            width: 100%;
+            height: 600px;
+            text-align: center;
+        }
+        .image-four{
+            top: 10%;           /* 根据需要调整垂直位置 */
+            left: 0%;           /* 容器的右侧与父容器的左侧距离 */
+            width: 100%;          /* 容器宽度*/
+            transform: translate(0%,10%);
+
+        }
+        @font-face {
+            font-family:customFont;
+            src: url('fonts/造字工坊元气泡泡.ttf') format('truetype'); 
+        }
+        @font-face {
+            font-family:customFont2;
+            src: url('fonts/三极欢乐体.ttf') format('truetype');
+        }
+        @font-face {
+            font-family:customFont3;
+            src: url('fonts/renjiannailaobianlidian.ttf') format('truetype');
+        }
+    </style>
+       
+</head>
+
+<body>
+    <!--================Header Area =================-->
+    <header class="header_area">
+        <div class="top_bar">
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <div class="left">
+                        <h5 style="font-family: 'customFont3'; font-weight: bold;font-size: 25px;"><i class="fa fa-phone"></i>食话食说:宠物食品安全大揭秘！</h5>
+                    </div>
+                    <div class="right">
+                        <ul class="nav">
+                            <li><a style="font-family: 'customFont3'; font-weight: bold;font-size: 17px;">小组成员：马小善、邱静宜、方誉乐、陈淑敏</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="食话食说.html"></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation"><span></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="dropdown submenu active"><a style="font-family: 'customFont3'; font-weight: bold;font-size: 20px;"class="dropdown-toggle" data-toggle="dropdown" href="#main_slider" role="button" aria-haspopup="true" aria-expanded="false">主页 </a><i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                                <ul
+                                    class="dropdown-menu">                                    
+                        </ul>
+                        </li>
+                        <li class="dropdown submenu"><a style="font-family: 'customFont3'; font-weight: bold;font-size: 20px;"class="dropdown-toggle" data-toggle="dropdown" href="#p1" role="button" aria-haspopup="true" aria-expanded="false">故事</a><i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                            <ul
+                                class="dropdown-menu">
+                                </ul>
+                        </li>
+                        <li class="dropdown submenu"><a style="font-family: 'customFont3'; font-weight: bold;font-size: 20px;"class="dropdown-toggle" data-toggle="dropdown" href="#Help" role="button" aria-haspopup="true" aria-expanded="false">帮助 </a><i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                            <ul
+                                class="dropdown-menu">                            
+                                </ul>
+                        </li>
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="reserve_btn"><a style="font-family: 'customFont3'; font-weight: bold;font-size: 23px;"href="http://www.legaldaily.com.cn/commentary/content/2022-09/19/content_8783142.html">相关案例</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--================End Header Area =================-->
+    <!--================封面 Area =================-->
+    <section class="main_slider_area">
+        <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
+            <ul>
+                <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="img/home-slider/slider-1.jpg" data-rotate="0"
+                    data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE --><img src="img/slider.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+                <!-- LAYER NR. 1 -->
+                <div class="slider_text_box">
+                    <div class="tp-caption tp-resizeme first_text" 
+                        data-x="['right','right','right','15','15']" 
+                        data-hoffset="['0','0','0','0']" 
+                        data-y="['top','top','top','top']" 
+                        data-voffset="['150','150','150','70','70']" 
+                        data-fontsize="['100','100','100','60','55']"
+                        data-lineheight="['100','95','95','55','50']" 
+                        data-width="['750','670','670','400','320']" 
+                        data-height="none" 
+                        data-whitespace="normal" 
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                        data-textAlign="['left','left','left','left']"
+                        style="font-family: 'customFont', sans-serif; color: #ffffff; font-weight: bold;">食话食说：<br />宠物食品安全大揭秘！</div>
+                    <div class="tp-caption tp-resizeme secand_text" 
+                        data-x="['right','right','right','15','15']" 
+                        data-hoffset="['0','0','0','0']" 
+                        data-y="['top','top','top','top']" 
+                        data-voffset="['360','360','360','280','280']"
+                        data-fontsize="['30','30','30','22','22']" 
+                        data-lineheight="['32','32','32','32']" 
+                        data-width="['670','670','670','550','400']" 
+                        data-height="none" 
+                        data-whitespace="normal" 
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-transform_idle="o:1;"
+                        data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                        style="font-family: 'customFont2', sans-serif; color: #ffffff; font-weight: bold; letter-spacing: 2px;">The safety issues of pet food. </div>
+                    <div class="tp-caption tp-resizeme slider_button" 
+                        data-x="['right','right','right','15','15']"
+                        data-hoffset="['0','0','0','0']" 
+                        data-y="['top','top','top','top']" 
+                        data-voffset="['420','420','420','340','340']" 
+                        data-fontsize="['30','30','30','30']" 
+                        data-lineheight="['46','46','46','46']" 
+                        data-width="['650','650','650','530','380']"
+                        data-height="none" 
+                        data-whitespace="nowrap" 
+                        data-type="text" 
+                        data-responsive_offset="on" 
+                        data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"><a style="font-family: 'customFont3'; font-weight: bold;"class="view_all_btn" href="#p1">查看详情</a></div>
+                    </div>
+                </li>
+                <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="img/home-slider/slider-2.jpg"
+                    data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE --><img img src="img/slider.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+            <!-- LAYER NR. 2 -->
+            <div class="slider_text_box">
+                <div class="tp-caption tp-resizeme first_text" 
+                    data-x="['right','right','right','15','15']" 
+                    data-hoffset="['0','0','0','0']" 
+                    data-y="['top','top','top','top']" 
+                    data-voffset="['300','300','300','220','220']" 
+                    data-fontsize="['80','80','80','40','35']"
+                    data-lineheight="['89','89','89','50','45']" 
+                    data-width="['700','700','700','450','370']" 
+                    data-height="none" 
+                    data-whitespace="normal" 
+                    data-type="text" 
+                    data-responsive_offset="on" 
+                    data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                    data-textAlign="['center','center','center','center']"
+                    style="font-family: 'customFont', sans-serif; color: #ffffff;">请多多关注<br />宠物食品安全~</div>
+                <div class="tp-caption tp-resizeme secand_text" 
+                    data-x="['right','right','right','15','15']" 
+                    data-hoffset="['0','0','0','0']" 
+                    data-y="['top','top','top','top']" 
+                    data-voffset="['500','500','500','420','420']"
+                    data-fontsize="['30','30','30','22','22']" 
+                    data-lineheight="['32','32','32','32']" 
+                    data-width="['700','700','700','450','370']"  
+                    data-height="none" 
+                    data-whitespace="normal" 
+                    data-type="text" 
+                    data-responsive_offset="on" 
+                    data-transform_idle="o:1;"
+                    data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                    data-textAlign="['center','center','center','center']"
+                    style="font-family: 'customFont2', sans-serif; color: #ffffff; font-weight: bold; letter-spacing: 2px;">Many issues related to<br />pet food safety<br />still lack social attention. </div>
+                <div class="tp-caption tp-resizeme slider_button" 
+                    data-x="['right','right','right','15','15']"
+                    data-hoffset="['0','0','0','0']" 
+                    data-y="['top','top','top','top']" 
+                    data-voffset="['640','640','640','560','560']" 
+                    data-fontsize="['14','14','14','14']" 
+                    data-lineheight="['46','46','46','46']" 
+                    data-width="['410','410','410','160','160']"
+                    data-height="none" 
+                    data-whitespace="nowrap" 
+                    data-type="text" 
+                    data-responsive_offset="on" 
+                    data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"><a style="font-family: 'customFont3'; font-weight: bold;"class="view_all_btn" href="#trans">了解更多</a></div>
+                    </div>
+                </li>
+                <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="img/home-slider/slider-3.jpg"
+                    data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE --><img src="img/slider.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+            <!-- LAYER NR. 3 -->
+            <div class="slider_text_box">
+                <div class="tp-caption tp-resizeme first_text" 
+                    data-x="['right','right','right','15','15']" 
+                    data-hoffset="['0','0','0','0']" 
+                    data-y="['top','top','top','top']" 
+                    data-voffset="['400','400','400','320','320']" 
+                    data-fontsize="['80','80','80','40','40']"
+                    data-lineheight="['90','90','90','40','40']" 
+                    data-width="['510','510','510','300','300']" 
+                    data-height="none" 
+                    data-whitespace="normal" 
+                    data-type="text" 
+                    data-responsive_offset="on" 
+                    data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                    data-textAlign="['center','center','center','center']"
+                    style="font-family: 'customFont', sans-serif; color: #ffffff;">打击无良宠物粮厂商<br />投诉有渠道！</div>
+                <div class="tp-caption tp-resizeme secand_text" 
+                    data-x="['right','right','right','15','15']" 
+                    data-hoffset="['0','0','0','0']" 
+                    data-y="['top','top','top','top']" 
+                    data-voffset="['590','590','590','380','380']"
+                    data-fontsize="['30','30','30','22','22']" 
+                    data-lineheight="['32','32','32','32']" 
+                    data-width="['670','670','670','550','400']"  
+                    data-height="none" 
+                    data-whitespace="normal" 
+                    data-type="text" 
+                    data-responsive_offset="on" 
+                    data-transform_idle="o:1;"
+                    data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                    data-textAlign="['right','right','right','right']"
+                    style="font-family: 'customFont2', sans-serif; color: #ffffff; font-weight: bold; letter-spacing: 2px;">In order to strike down on <br />unscrupulous pet food manufacturers,<br />we provide you with some complaint channels. </div>
+                <div class="tp-caption tp-resizeme slider_button" 
+                    data-x="['right','right','right','15','15']" 
+                    data-hoffset="['0','0','0','0']" 
+                    data-y="['top','top','top','top']" 
+                    data-voffset="['720','720','720','460','460']"
+                    data-fontsize="['14','14','14','14']" 
+                    data-lineheight="['46','46','46','46']" 
+                    data-width="['200','200','200','100','100']" 
+                    data-height="none" 
+                    data-whitespace="nowrap" 
+                    data-type="text" 
+                    data-responsive_offset="on" 
+                    data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"><a style="font-family: 'customFont3'; font-weight: bold;"class="view_all_btn" href="#Help">查看投诉渠道 </a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--================End 封面 Area =================-->
+    <!--================p1介绍 Area =================-->
+    <section id="p1" class="section initial">
+        <div class="section-initial">
+            <div class="row welcome_inner">
+                <!-- 图片容器 -->
+                <div class="images-container">
+                    <img class="image-one" src="img/1.jpg" alt="p1 Image">
+                    <img class="image-two" src="img/2.jpg" alt="p2 Image">
+                </div>
+                <!-- 文字容器 -->
+                <div class="text-container" id="t1">
+                    <h2>大家好，我是小明</h2>
+                    <h3>一个爱宠如命的<br/>“铲屎官”</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End p1介绍 Area =================-->
+    <!--================过渡 Area =================-->
+    <section id="trans" class="exprience_area">
+        <div class="container">
+            <div class="exprience_inner_text">
+                <h3 style="font-family: customFont3">不知道你是否也听过那些<br>惊人的食品安全事件</h3>
+                <p style="font-family: 'customFont3'; font-weight: 400; color: #ffffff; font-size:23px; line-height: 1.5;"> 
+                    比如"地沟油"或"毒奶粉"事件
+                    <br>这些问题让人触目惊心
+                    <br>“民以食为天”<br>吃的食品都没有保障的话<br>又有何安全可言？</p>
+                    <a class="view_all_btn" href="https://new.qq.com/rain/a/20231227A01NNB00" style="font-family: 'customFont3'; font-weight: 600;">了解更多</a></div>
+        </div>
+    </section>
+    <!--================End 过渡 Area =================-->
+    <!--================p2 Area =================-->
+    <section class="restaurant_view_area pad_btm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="restu_img"><img class="img-fluid" src="img/3.jpg" alt=""></div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="restaurant_details">
+                        <h3 style="font-family: 'customFont3'; font-weight: bold;color: #7f4400;">然而,今年3.15期间曝光的<br/>"河北劣质宠物粮"事件</h3>
+                        <h5 style="font-family: 'customFont3'; font-weight: bold; color: #000000; font-size:23px; line-height: 1.5;font-style: normal;">彻底颠覆了我对"贵猫粮"的信任</h5>
+                        <p style="font-family: 'customFont3'; font-weight: bold; color: #000000; font-size:20px; line-height: 1.2">这让我开始担心自己给宠物买的食品是否安全<br>我突然意识到,关于宠物食品安全,<br/>我可能知道的还远远不够</p><a class="text_btn_u" href="https://mp.weixin.qq.com/s?spm=C73544894212.P99790479609.0.0&__biz=Mjc4NjgzMzYwMA==&mid=2651622633&idx=1&sn=d661d17919fe109a8ce860ba1badf070&chksm=95dc6f46a2abe650a965ee11b38facc5c4e392c3d8371340dd2145acd77abbc3082360ed1ef9&scene=21#wechat_redirect" style="font-family: 'customFont3'; font-weight: bold;">相关报道</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End p2 Area =================-->     
+    <!--================数据 Area =================-->
+    <section id="filearea" class="dishes_area p_100">
+        <div class="container">
+            <div class="left_title">
+                <h2 style="font-family: 'customFont3'; font-weight: bold;font-size: 37px;">为了解目前宠物市场的规模和宠物食品行业的现状,我查阅了各种资料</h2>
+                <p style="font-family: 'customFont3'; font-weight: bold;font-size: 15px;color: aliceblue;">In order to understand the current size of the pet market and the current state of the pet food industry, I looked up various sources.</p>
+            </div>
+            <div class="dishes_slider owl-carousel">
+                <div class="item">
+                    <div class="product_item">
+                        <div class="product_img"><img class="img-fluid" src="img/猫狗占比.png" alt=""></div>
+                        <div class="product_text">
+                            <a href="#filearea">
+                                <h5 style="font-family: 'customFont3'; font-weight: bold;color: #ffffff;font-size: 26px;"><br/>猫狗占比</h5>
+                            </a>
+                            <a href="#filearea">
+                                <h4 style="font-family: 'customFont3'; font-weight: 500;font-size:23px;line-height: 1.5;"><br/>根据亚宠研究院的数据:在2018年到2023年期间,除了疫情管控时期,其他时间养宠数量一直在增长。<br/>2023年我国宠物总量已经突破1.2亿只,其中宠物猫数量达6980万只,宠物狗数量为5175万只!</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_item">
+                        <div class="product_img"><img class="img-fluid" src="img/养宠人群.jpeg" alt=""></div>
+                        <div class="product_text">
+                            <a href="养宠人数.html">
+                                <h5 style="font-family: 'customFont3'; font-weight: bold; color: #ffffff;font-size: 26px;"><br/>养宠人数</h5>
+                            </a>
+                            <a href="养宠人数.html">
+                                <h4 style="font-family: 'customFont3'; font-weight: 500; font-size:23px;line-height: 1.5;"><br/>养宠人群多为25-34岁的中青年人,占比约为50.2%。<br>你也是这其中的中青年之一吗?<br>一线城市和新一线城市,宠物消费人群占比分别为29.7%和16.9%</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_item">
+                        <div class="product_img"><img class="img-fluid" src="img/618销售额.png" alt=""></div>
+                        <div class="product_text">
+                            <a href="京东618宠物粮销售额.html">
+                                <h5 style="font-family: 'customFont3'; font-weight: bold; color: #ffffff;font-size: 26px;">京东618宠物粮销售额</h5>
+                            </a>
+                            <a href="京东618宠物粮销售额.html">
+                                <h4 style="font-family: 'customFont3'; font-weight: 500; font-size:23px;line-height: 1.5;"><br/>在京东购物平台浏览有关宠物粮的信息时，我发现宠物粮的需求量丝毫不比人类零食的需求量小，众多商家在此平台上的销售额也相当可观。</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_item">
+                        <div class="product_img"><img class="img-fluid" src="img/双11销售额.png" alt=""></div>
+                        <div class="product_text">
+                            <a href="天猫双11宠物粮销售额.html">
+                                <h5 style="font-family: 'customFont3'; font-weight: bold; color: #ffffff;font-size: 26px;">天猫双11宠物粮销售额</h5>
+                            </a>
+                            <a href="天猫双11宠物粮销售额.html">
+                                <h4 style="font-family: 'customFont3'; font-weight:500; font-size:23px;line-height: 1.5;"><br/>在天猫购物平台，我也发现了宠物粮的高需求量。许多知名商家的销售额均达到了上百万之多，这表明宠物粮市场在这个平台上同样繁荣。</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><a style="font-family: 'customFont3'; font-weight: bold; color:white; font-size: 30px;line-height: 1.5;"><br/><br/>随着宠物经济的兴起,宠物数量正在迅速增加,宠物食品市场也在不断扩大。<br/>然而,你有没有注意到,很多时候宠物食品的安全问题却被忽视了</a></div>
+        </div>
+    </section>
+    <!--================End 数据 Area =================-->
+    <!--================chart Area =================-->
+    <section id="chartarea" class="tema_area pad_top">
+        <div class="container">
+            <div class="left_title2">
+                <h2 style="font-family: 'customFont3'; font-size:50px;color: #000000;"><br/>通过对“黑猫投诉”等平台的数据爬取，我发现：</h2>
+                <p style="font-family: 'customFont3'; font-weight: bold; font-style: normal;font-size:20px;color: #000000;">有关宠物粮食的投诉高达上千条,其中“生产日期有误”、“配料表信息欠缺”等问题最为常见。<br>而“问题粮”可能导致较为严重的问题:轻则出现呕吐、腹胀等现象,重则可能导致便血甚至死亡。</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 p-0">
+                    <div class="team_item">
+                        <canvas id="chart1" width="400" height="400"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const data1 = {
+                                    labels: ["过期", "发霉", "受潮", "变质", "发臭", "生蛆"],
+                                    datasets: [{
+                                        label: "卖家存放问题",
+                                        data: [30, 15, 7, 21, 13, 7],
+                                        backgroundColor: "rgba(20, 20, 20, 0.5)",
+                                        borderColor: "rgb(20, 20, 20)",
+                                        borderWidth: 1,
+                                        hoverBorderWidth: 2,
+                                        hoverBackgroundColor: "rgba(255, 99, 132, 0.4)"
+                                    }]
+                                };                    
+                                const config1 = {
+                                    type: 'bar',
+                                    data: data1,
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                min: 0,
+                                                max: 35,
+                                                ticks: {
+                                                    color: 'black',
+                                                    stepSize: 5
+                                                }
+                                            },
+                                            x: {
+                                                ticks: {
+                                                    color: 'black'
+                                                }
+                                            }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    color: 'black',
+                                                    font: {
+                                                        size: 14
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                };                    
+                                const chart1 = new Chart(document.getElementById('chart1'), config1);
+                            });
+                        </script>                
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 p-0">
+                    <div class="team_item">
+                        <canvas id="chart2" width="400" height="400"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const data2 = {
+                                    labels: ["包装损坏", "包装有破洞", "包装存在针孔", "包装漏气", "包装胀气"],
+                                    datasets: [{
+                                        label: "包装损坏问题",
+                                        data: [34, 9, 42, 5, 4],
+                                        backgroundColor: "rgba(54, 162, 235, 0.2)",
+                                        borderColor: "rgba(54, 162, 235, 1)",
+                                        borderWidth: 1,
+                                        hoverBorderWidth: 2,
+                                        hoverBackgroundColor: "rgba(54, 162, 235, 0.4)"
+                                    }]
+                                };                    
+                                const config2 = {
+                                    type: 'bar',
+                                    data: data2,
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                min: 0,
+                                                max: 50,
+                                                ticks: {
+                                                    color: 'black',
+                                                    stepSize: 5
+                                                }
+                                            },
+                                            x: {
+                                                ticks:{
+                                                    color:'black'
+                                                }
+                                            }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    color: 'black', // 修改图例文字颜色为黑色
+                                                    font: {
+                                                        size: 14, // 图例文字的字体大小
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                };
+                                const chart2 = new Chart(document.getElementById('chart2'), config2);
+                            });
+                        </script>                
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 p-0">
+                    <div class="team_item">
+                        <canvas id="chart3" width="400" height="400"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const data3 = {
+                                    labels: ["三无产品", "非法添加", "配料表信息欠缺", "售卖假货", "生产日期有误", "无生产日期", "无生产厂家", "无中文说明", "产品质量差"],
+                                    datasets: [{
+                                        label: "厂商生产问题",
+                                        data: [11, 12, 9, 49, 43, 24, 5, 6, 12],
+                                        backgroundColor: "rgba(75, 192, 192, 0.2)",
+                                        borderColor: "rgba(75, 192, 192, 1)",
+                                        borderWidth: 1,
+                                        hoverBorderWidth: 2,
+                                        hoverBackgroundColor: "rgba(75, 192, 192, 0.4)"
+                                    }]
+                                };                    
+                                const config3 = {
+                                    type: 'bar',
+                                    data: data3,
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                min: 0,
+                                                max: 60,
+                                                ticks: {
+                                                    color: 'black',
+                                                    stepSize: 5
+                                                }
+                                            },
+                                            x: {
+                                                ticks:{
+                                                    color:'black'
+                                                }
+                                            }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    color: 'black', // 修改图例文字颜色为蓝色
+                                                    font: {
+                                                        size: 14, // 图例文字的字体大小
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                };
+                                const chart3 = new Chart(document.getElementById('chart3'), config3);
+                            });
+                        </script>                
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 p-0">
+                    <div class="team_item">
+                        <canvas id="chart4" width="400" height="400"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const data4 = {
+                                    labels: ["宠物粮存在异物", "宠物粮中有苍蝇", "宠物粮中有虫类", "宠物粮中有塑料", "宠物粮中有头发"],
+                                    datasets: [{
+                                        label: "存在异物",
+                                        data: [26, 5, 34, 14, 4],
+                                        backgroundColor: "rgba(153, 102, 255, 0.2)",
+                                        borderColor: "rgba(153, 102, 255, 1)",
+                                        borderWidth: 1,
+                                        hoverBorderWidth: 2,
+                                        hoverBackgroundColor: "rgba(153, 102, 255, 0.4)"
+                                    }]
+                                };                   
+                                const config4 = {
+                                    type: 'bar',
+                                    data: data4,
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                min: 0,
+                                                max: 40,
+                                                ticks: {
+                                                    color: 'black',
+                                                    stepSize: 5
+                                                }
+                                            },
+                                            x: {
+                                                ticks:{
+                                                    color:'black'
+                                                }
+                                            }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    color: 'black', // 修改图例文字颜色为蓝色
+                                                    font: {
+                                                        size: 14, // 图例文字的字体大小
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                };
+                                const chart4 = new Chart(document.getElementById('chart4'), config4);
+                            });
+                        </script> 
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 p-0">
+                    <div class="team_item">
+                        <canvas id="chart5" width="400" height="400"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const data5 = {
+                                    labels: ["出现健康问题", "呕吐", "腹胀", "流血", "腹泻", "便血", "肠胃问题", "死亡"],
+                                    datasets: [{
+                                        label: "引发的宠物健康问题",
+                                        data: [31, 178, 2, 68, 136, 2, 31, 53],
+                                        backgroundColor: "rgba(255, 99, 132, 0.2)",
+                                        borderColor: "rgba(0, 0, 0, 1)",
+                                        borderWidth: 1,
+                                        hoverBorderWidth: 2,
+                                        hoverBackgroundColor: "rgba(255, 206, 86, 0.4)"
+                                    }]
+                                };                  
+                                const config5 = {
+                                    type: 'bar',
+                                    data: data5,
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                min: 0,
+                                                max: 200,
+                                                ticks: {
+                                                    color: 'black',
+                                                    stepSize: 5
+                                                }
+                                            },
+                                            x: {
+                                                ticks:{
+                                                    color:'black'
+                                                }
+                                            }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    color: 'black', // 修改图例文字颜色为蓝色
+                                                    font: {
+                                                        size: 14, // 图例文字的字体大小
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                };
+                                const chart5 = new Chart(document.getElementById('chart5'), config5);
+                            });
+                        </script> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End chart Area =================-->
+    <section id="space">
+        <div>
+            <p>
+                <br/><br/><br/>
+            </p>
+        </div>
+    </section>
+    <!-- 引入 ECharts -->
+    <section id="chartarea" class="ECharts">
+        <div class="chart-container" id="container">
+            <script src="js/echarts.min.js"></script>
+            <script type="text/javascript">
+                const healthIssuesData = {
+                    '出现健康问题': 31,
+                    '呕吐': 178,
+                    '腹胀': 2,
+                    '流血': 68,
+                    '腹泻': 136,
+                    '便血': 2,
+                    '肠胃问题': 31,
+                    '死亡': 53
+                };
+        
+                const sortedData = Object.keys(healthIssuesData).map(key => {
+                    return {
+                        name: key,
+                        value: healthIssuesData[key]
+                    };
+                }).sort((a, b) => b.value - a.value);
+        
+                const myChart = echarts.init(document.getElementById('container'));
+        
+                const option = {
+                    title: {
+                        text: '健康问题数据图',
+                        left: 'center', // 标题居中
+                        top: 'top',    // 标题在顶部
+                        textStyle: {
+                            fontFamily:'customFont3',
+                            fontWeight:'bold',
+                            fontSize: 40,
+                            color:"black"
+                        }
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b}: {c} ({d}%)',
+                        textStyle: {
+                            fontWeight: 'bold',
+                            fontSize: 20,
+                            fontFamily:'customFont3',
+                        }
+                    },
+                    legend: {
+                        left: 'center', // 居中
+                        top: 'bottom',  // 图例在底部居中
+                        data: sortedData.map(item => item.name),
+                        textStyle: {
+                            fontFamily:'customFont3',
+                            fontWeight: 'bold',
+                            fontSize: 20
+                        }
+                    },
+                    series: [
+                        {
+                            name: '健康问题',
+                            type: 'pie',
+                            radius: ['30%', '55%'],    // 饼图的大小
+                            center: ['50%', '50%'],    // 饼图的位置
+                            data: sortedData,
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            },
+                            color: sortedData.map((item, index) => {
+                                let color = '#ff7f50';
+                                let brightness = 1 - index / sortedData.length;
+                                let r = Math.floor(parseInt(color.slice(1, 3), 16) * brightness);
+                                let g = Math.floor(parseInt(color.slice(3, 5), 16) * brightness);
+                                let b = Math.floor(parseInt(color.slice(5, 7), 16) * brightness);
+                                return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+                            }),
+                            label: {
+                                fontFamily:'customFont3',
+                                fontWeight: 'bold',
+                                fontSize: 20
+                            },
+                            labelLine: {
+                                lineStyle: {
+                                    color: 'black',
+                                    width: 4
+                                }
+                            },
+                            itemStyle: {
+                                borderWidth: 2,
+                                borderColor: 'black'
+                            }
+                        }
+                    ]
+                };
+        
+                myChart.setOption(option);
+            </script>    
+        </div>
+    </section>
+    <!-- end ECharts -->
+    <!--================投诉图 Area Area =================-->
+    <section id="complaintarea" class="home_blog_area p_100">
+        <div class="container">
+            <div class="center_title">
+                <h2 style="font-family:'customFont3';font-size: 38px; font-weight: bolder; color: #000000;">令我震惊的是，平时我常购买的麦富迪洁牙零食和信元发育宝猫粮，
+                    <br>竟是“投诉榜上的常客”！</p></h2>
+            </div>
+            <div class="row home_blog_inner">
+                <div class="col-lg-4">
+                    <div class="h_blog_item">
+                        <div class="blog_img"><img class="img-fluid" src="img/7.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h_blog_item">
+                        <div class="blog_img"><img class="img-fluid" src="img/8.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h_blog_item">
+                        <div class="blog_img"><img class="img-fluid" src="img/9.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="text-blog">
+                    <p style="font-family:'customFont3';font-size: 15px; font-weight: bolder; color: #000000;">资料来源于腾讯网《乖宝宠物食品质量投诉依然密集，麦富迪以爱之名如何避免底线危机》
+                        &澎湃新闻信元疑涉“毒猫粮”：上百只猫咪之死，能否让国产宠粮停止狂奔？</p>
+                </div>
+        </div>
+    </section>
+    <!--================End 投诉图 Area Area =================-->
+
+    <!--================词频 Area =================-->
+    <section id="word" class="w1">
+        <div class="container">
+            <div class="row welcome_inner">
+                <div class="col-lg-6">
+                    <div class="start_text">
+                        <h3 style="font-family: 'customFont3'; color: #000000; font-size:35px;font-weight: 800; line-height: 1.3">此外,通过查阅与宠物相关的文献并进行词频统计,我发现"宠物食品"收到一定的关注，但涉及食品安全的关注度较少。</h3>
+                </div>
+                <div class="col-lg-6">
+                    <div class="w2">
+                        <div class="image_item"><img class="img-fluid" src="img/10.jpeg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End 词频 Area =================-->
+    <!--================结尾 Area =================-->
+    <section id="text-e" class="footer_area">
+        <div class="container">
+            <div class="footer_widgets">
+                <img class="image-three" src="img/猫狗1.png" alt="p3 Image">
+                <div id="text">
+                    <h2>那么，有没有很多铲屎官和曾经的我一样，<br/>盲目地为宠物买粮，却不了解其中的问题和风险呢？<br>
+                        在了解这些问题后，我找到了能够帮助我们维权以及投诉的方法和渠道，<br/>一起来看看吧！</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End 结尾 Area =================-->
+    <!--================ 帮助 Area =================-->
+    <section class="discover_menu_area pad_btm">
+        <div id="Help">
+        <div class="discover_menu_inner pad_top">
+            <div class="center_title text-center">
+                <h2 style="font-size: 45px;font-family: 'customFont3';font-weight: 600;">相关帮助</h2>
+                <p style="font-style: normal;font-size: 22px;font-family: 'customFont3';font-weight: 600;">投诉有渠道 买粮有参照</p>
+            </div>
+            <div class="container">
+                <div class="discover_tab">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item"><a class="nav-link" id="protection-tab" data-toggle="tab" href="#protection" role="tab" aria-controls="protection" aria-selected="true" style="font-family: 'customFont3';font-size: 23px;font-weight: bold;">维权方式</a></li>
+                        <li class="nav-item"><a class="nav-link" id="complaint-tab" data-toggle="tab" href="#complaint" role="tab" aria-controls="complaint" aria-selected="false" style="font-family: 'customFont3';font-size: 23px;font-weight: bold;">投诉渠道</a></li>
+                        <li class="nav-item"><a class="nav-link" id="recommend-tab" data-toggle="tab" href="#recommend" role="tab" aria-controls="recommend" aria-selected="false" style="font-family: 'customFont3';font-size: 23px;font-weight: bold;">宠物粮推荐</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content discover_list" id="myTabContent">
+                    <div class="tab-pane fade" id="protection" role="tabpanel" aria-labelledby="protection-tab">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="price_list_item">
+                                    <a >
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">联系当地市场监管部门</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">例如：广州市市场监督管理局<br />地址 : 广州市天河区天河路112号<br />电话 : 020-83740356</a></div>                                
+                                </div>
+
+                                <div class="price_list_item">
+                                    <a >
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">利用对应的电商平台进行索赔</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">首先向商家客服索要赔偿，若其不理赔可直接向平台官方客服申诉</a></div>                                
+                                </div>
+
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">联系生产厂家</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">可以采取打食品包装上的电话，微博，微信等各种方式联系厂家</a></div>
+                                </div>
+
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">在社交媒体和论坛发声</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">发布文章吸引关注，便于维权，并能提醒他人避雷相关商家</a></div>                                
+                                </div>
+
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">法律途径</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">联系律师，了解您的权利，并根据律师的建议采取相应的法律行动</a></div>
+                                </div>
+                                
+                                <div class="price_list_item">
+                                    <a style="font-family: 'customFont3';font-weight: bold; font-size: 20px;line-height: 1.3;color: #0400ff;">
+                                        需要注意的是，在维权过程中，保留好相关证据非常重要，包括购买凭证、宠物食品的照片、宠物的医疗报告等，这些都可能作为维权的依据。
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="complaint" role="tabpanel" aria-labelledby="complaint-tab">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">国家工商行政管理总局</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">投诉专线：12315/<br/>投诉平台：</a><a href="https://www.12315.cn/" style="color:blue;font-size: 15px;font-family: 'customFont3';font-weight: 600;">https://www.12315.cn/</a></div>
+                                    
+                                </div>
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">电商平台</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">在某电商平台中，若购买到有问题的宠物食品，可直接将店铺上报至平台，等待平台处理。</a></div>
+                                
+                                </div>
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">市民热线</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">电话：12345</a></div>
+                                
+                                </div>
+                                <div class="price_list_item">
+                                    <a>
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">新闻/报社媒体</h4>
+                                    </a>
+                                    <div class="cat_list"><a style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">能在各大新闻媒体的官网找到联系方式<br />例如：法治网<br />电话总机：010-84772882<br />联系电话：010-84772595<br />网站E-MAIL：bxxb@legaldaily.com.cn<br />地址：北京市朝阳区花家地甲一号　邮编：100102</a></div>
+                                </div>
+
+                                <div class="price_list_item">
+                                    <a style="font-size: 19px;font-family: 'customFont3'; font-weight: bold; line-height: 1.3;color: #0400ff;">
+                                        在购买宠物或宠物相关服务时，要预先查看经营者的资质、消费者评价等信息，尽量选择资质齐全、信誉较好的宠物店进行消费，并与商家签订书面购买协议，要求商家出具发票和服务明细等书面凭证，确保宠物健康和事后维权有据。
+                                    </a>
+                                </div>
+                                
+                            </div>                             
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade show active" id="recommend" role="tabpanel" aria-labelledby="recommend-tab">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="price_list_item">
+                                    <!-- 将按钮移动到“艾媒金榜”下方 -->
+                                    <a href="艾媒金榜.html">
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">艾媒金榜</h4>
+                                    </a>                                    
+                                    <div class="cat_list"><a href="艾媒金榜.html" style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">2021年中国宠物食品品牌排行榜Top15</a></div>                                    
+                                    <a href="艾媒金榜.html"; style="display: inline-block; text-decoration: none; padding: 2px 3px; border-radius: 2px; font-size:x-small; color:blue;font-family: 'customFont3';font-weight: 600;">
+                                        排行详情
+                                    </a>
+                                </div>
+                                
+                                <div class="price_list_item">
+                                    <!-- 将按钮移动到“艾媒金榜”下方 -->
+                                    <a href="淘宝销售量榜.html">
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">淘宝销售量榜</h4>
+                                    </a>
+                                    <div class="cat_list"><a href="淘宝销售量榜.html" style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">宠物食品品牌销售量排行榜Top12</a></div>
+                                    <a href="淘宝销售量榜.html" style="display: inline-block; text-decoration: none; padding: 2px 3px; border-radius: 2px; font-size:x-small; color:blue;font-family: 'customFont3';font-weight: 600;">
+                                        排行详情
+                                    </a>                    
+                                </div>
+
+                                <div class="price_list_item">
+                                    <!-- 将按钮移动到“艾媒金榜”下方 -->
+                                    <a href="京东好评榜.html">
+                                        <h4 style="font-size: 23px;font-family: 'customFont3';font-weight: 600;">京东好评榜</h4>
+                                    </a>
+                                    <div class="cat_list"><a href="京东好评榜.html" style="font-size: 15px;font-family: 'customFont3';font-weight: 600;">京东食品评论数排名（含食品名称及品牌名称）Top15</a></div>
+                                    <a href="京东好评榜.html" style="display: inline-block; text-decoration: none; padding: 2px 3px; border-radius: 2px; font-size:x-small; color:blue;font-family: 'customFont3';font-weight: 600;">
+                                        排行详情
+                                    </a>
+                                    <div class='endend'>
+                                        <p>
+                                            <br/>
+                                        </p>
+                                        <img class="image-four" src="img/猫狗2.png" alt="p4 Image">
+                                        <p>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End 帮助 Area =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first,then Popper.js,then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Rev slider js -->
+    <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <!-- Extra Plugin js -->
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/nice-selector/js/jquery.nice-select.min.js"></script>
+    <script src="js/theme-dist.js"></script>
+</body>
